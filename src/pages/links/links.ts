@@ -22,7 +22,7 @@ import { LinksModal } from "./links-modal/links-modal";
 export class LinksPage {
 
   links: any;
-  exclui: boolean;
+  //exclui: boolean;
   link:any;
   select: boolean = false;
   index: any;
@@ -37,7 +37,7 @@ export class LinksPage {
     public alertCtrl: AlertController
   ) {
     this.links = linksService.getLinks();
-    this.exclui = false;
+    //this.exclui = false;
 
   }
 
@@ -71,6 +71,7 @@ export class LinksPage {
     modal.onDidDismiss(
       (link) => {
         this.linksService.insert(link)
+
       });
 
     modal.present();
@@ -80,19 +81,35 @@ export class LinksPage {
     let modal = this.modalCtrl.create(LinksModal, {parametro: link, index: this.links.indexOf(link)});
 
     modal.onDidDismiss(
-        (link) => {this.linksService.update(link,this.index)
+        (link) => {
+        this.select = false;
+        this.linksService.update(link,this.index);
+        
     });
 
     modal.present();
   }
 
 
-  excluir(link) {
+  exclui(link) {
+
+
+    //console.log(link);
+    this.showConfirm();
+    //this.linksService.excluir(this.links.indexOf(link));
+    //this.exclui = false;
+    //this.select = false;
+    
+  }
+
+    excluir(link) {
 
 
     console.log(link);
+    //this.showConfirm();
     this.linksService.excluir(this.links.indexOf(link));
-    this.exclui = false;
+    //this.exclui = false;
+    this.select = false;
     
   }
 
