@@ -28,11 +28,9 @@
   </ion-fab-->
   <ion-list>
 
-   <button ion-item *ngFor="let link of links" (press)="botoes(link)" (tap)="goPage(link)" >
+   <button ion-item  *ngFor="let link of links" (press)="botoes(link)" (tap)="goPage(link)" >
      {{link.nome}}
    </button>
-
-
 
 
   </ion-list>
