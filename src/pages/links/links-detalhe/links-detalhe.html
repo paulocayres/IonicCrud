@@ -1,0 +1,34 @@
+<!--
+  Generated template for the LinksDetalhe page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{link.nome}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-fab right top edge>
+    <button ion-fab (click)="update(link)" >
+      <ion-icon name="create"></ion-icon>
+    </button>
+  </ion-fab>
+  <p>
+    Dados de nascimento do(a) {{link.nome}}.
+  </p>
+
+  <p>Data: {{link.data}}</p>
+  <p>Hora: {{link.hora}}</p>
+  <p>País: {{link.pais}}</p>
+  <p>UF: {{link.uf}}</p>
+  <p>Município: {{link.municipio}}</p>
+  <p>Código Postal: {{link.codpostal}}</p>
+
+
+
+</ion-content>

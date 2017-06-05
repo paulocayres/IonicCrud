@@ -1,0 +1,35 @@
+<!--
+  Generated template for the Links page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mapas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!--ion-fab  *ngIf='exclui' left top edge>
+    <button ion-fab mini color="danger" (click)="excluir(link)"><ion-icon name="close"></ion-icon></button>
+  </ion-fab-->
+  <ion-list>
+
+    <button ion-item *ngFor="let link of links" (press)="botoes(link)" (click)="goPage(link)" >
+     {{link.nome}}
+   </button>
+
+
+
+  </ion-list>
+
+  <ion-fab top edge right>
+    <button ion-fab (click)="insert()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>
