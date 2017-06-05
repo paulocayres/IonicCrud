@@ -34,7 +34,7 @@ export class LinksModal {
   }
 
   cancel(){
-    this.viewCtrl.dismiss();
+    this.viewCtrl.dismiss(this.link);
   }
 
   salvar(){

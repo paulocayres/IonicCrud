@@ -9,6 +9,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-buttons *ngIf="select" end>
+      <button ion-button icon-only (tap)="update(link)">
+        <ion-icon name="create"></ion-icon>
+      </button>
+      <button ion-button icon-only (tap)="excluir(link)">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Mapas</ion-title>
   </ion-navbar>
 </ion-header>
@@ -20,16 +28,17 @@
   </ion-fab-->
   <ion-list>
 
-    <button ion-item *ngFor="let link of links" (press)="botoes(link)" (click)="goPage(link)" >
+   <button ion-item *ngFor="let link of links" (press)="botoes(link)" (tap)="goPage(link)" >
      {{link.nome}}
    </button>
+
 
 
 
   </ion-list>
 
   <ion-fab top edge right>
-    <button ion-fab (click)="insert()"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab *ngIf="!select" (click)="insert()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
 </ion-content>

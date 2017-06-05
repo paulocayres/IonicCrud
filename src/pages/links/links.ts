@@ -24,6 +24,8 @@ export class LinksPage {
   links: any;
   exclui: boolean;
   link:any;
+  select: boolean = false;
+  index: any;
 
 
   constructor(
@@ -45,10 +47,19 @@ export class LinksPage {
 
   goPage(link) {
     console.log("entrou no gopage")
+    
+    if (this.select==true){
+      this.select = false;
+    } else{
     this.navCtrl.push(LinksDetalhe,
       { index: this.links.indexOf(link), nome: link.nome, data: link.data, hora: link.hora, pais: link.pais, uf: link.uf, municipio: link.municipio, codpostal: link.codpostal }
 
     );
+    }
+
+
+
+
 
 
 
@@ -65,6 +76,17 @@ export class LinksPage {
     modal.present();
   }
 
+    update(link){
+    let modal = this.modalCtrl.create(LinksModal, {parametro: link, index: this.links.indexOf(link)});
+
+    modal.onDidDismiss(
+        (link) => {this.linksService.update(link,this.index)
+    });
+
+    modal.present();
+  }
+
+
   excluir(link) {
 
 
@@ -77,9 +99,12 @@ export class LinksPage {
   botoes(link: any){
     //this.exclui = true;
     this.link=link;
-    this.showConfirm();
+    //this.showConfirm();
+    this.select = true;
   
   }
+
+
 
   showConfirm() {
     let confirm = this.alertCtrl.create({
