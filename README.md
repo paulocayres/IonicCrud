@@ -1,0 +1,2 @@
+# IonicCrud
+Estudo CRUD Ionic
