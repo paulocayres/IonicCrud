@@ -44659,7 +44659,7 @@ var LinksModal = (function () {
 LinksModal = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-links-modal',template:/*ion-inline-start:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\pages\links\links-modal\links-modal.html"*/'<!--\n\n  Generated template for the LinksModal page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-toolbar>\n\n    <ion-title>\n\n      Modal links\n\n    </ion-title>\n\n    <ion-buttons start>\n\n      <button ion-button (click)="cancel()">\n\n        <ion-icon name="close"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<ion-list>\n\n  <ion-item>\n\n    <ion-label floating>Nome:</ion-label>\n\n    <ion-input type="text" [(ngModel)]="link.nome"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>Data:</ion-label>\n\n    <ion-input type="text" [(ngModel)]="link.data"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>Hora:</ion-label>\n\n    <ion-input type="text" [(ngModel)]="link.hora"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>País:</ion-label>\n\n    <ion-input type="text" [(ngModel)]="link.pais"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>UF:</ion-label>\n\n    <ion-input type="text" [(ngModel)]="link.uf"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>Município:</ion-label>\n\n    <ion-input type="text" [(ngModel)]="link.municipio"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>Código Postal:</ion-label>\n\n    <ion-input type="text" [(ngModel)]="link.codpostal"></ion-input>\n\n  </ion-item>\n\n</ion-list>\n\n<button ion-button block (click)="salvar()">Salvar</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\pages\links\links-modal\links-modal.html"*/,
+        selector: 'page-links-modal',template:/*ion-inline-start:"/home/paulocayres/projetojs/IonicCrud/src/pages/links/links-modal/links-modal.html"*/'<!--\n  Generated template for the LinksModal page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Modal links\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="cancel()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n<ion-list>\n  <ion-item>\n    <ion-label floating>Nome:</ion-label>\n    <ion-input type="text" [(ngModel)]="link.nome"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>Data:</ion-label>\n    <ion-input type="text" [(ngModel)]="link.data"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>Hora:</ion-label>\n    <ion-input type="text" [(ngModel)]="link.hora"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>País:</ion-label>\n    <ion-input type="text" [(ngModel)]="link.pais"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>UF:</ion-label>\n    <ion-input type="text" [(ngModel)]="link.uf"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>Município:</ion-label>\n    <ion-input type="text" [(ngModel)]="link.municipio"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>Código Postal:</ion-label>\n    <ion-input type="text" [(ngModel)]="link.codpostal"></ion-input>\n  </ion-item>\n</ion-list>\n<button ion-button block (click)="salvar()">Salvar</button>\n</ion-content>\n'/*ion-inline-end:"/home/paulocayres/projetojs/IonicCrud/src/pages/links/links-modal/links-modal.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -55739,7 +55739,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle permanent>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Astral MApp</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <h3>O seu Mapa Astral</h3>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/home/paulocayres/projetojs/IonicCrud/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle permanent>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Astral MApp</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>O seu Mapa Astral</h3>\n</ion-content>\n'/*ion-inline-end:"/home/paulocayres/projetojs/IonicCrud/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], HomePage);
@@ -55847,7 +55847,7 @@ var LinksDetalhe = (function () {
 LinksDetalhe = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-links-detalhe',template:/*ion-inline-start:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\pages\links\links-detalhe\links-detalhe.html"*/'<!--\n\n  Generated template for the LinksDetalhe page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>{{link.nome}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-fab right top edge>\n\n    <button ion-fab (click)="update(link)" >\n\n      <ion-icon name="create"></ion-icon>\n\n    </button>\n\n  </ion-fab>\n\n  <p>\n\n    Dados de nascimento do(a) {{link.nome}}.\n\n  </p>\n\n\n\n  <p>Data: {{link.data}}</p>\n\n  <p>Hora: {{link.hora}}</p>\n\n  <p>País: {{link.pais}}</p>\n\n  <p>UF: {{link.uf}}</p>\n\n  <p>Município: {{link.municipio}}</p>\n\n  <p>Código Postal: {{link.codpostal}}</p>\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\pages\links\links-detalhe\links-detalhe.html"*/,
+        selector: 'page-links-detalhe',template:/*ion-inline-start:"/home/paulocayres/projetojs/IonicCrud/src/pages/links/links-detalhe/links-detalhe.html"*/'<!--\n  Generated template for the LinksDetalhe page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>{{link.nome}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-fab right top edge>\n    <button ion-fab (click)="update(link)" >\n      <ion-icon name="create"></ion-icon>\n    </button>\n  </ion-fab>\n  <p>\n    Dados de nascimento do(a) {{link.nome}}.\n  </p>\n\n  <p>Data: {{link.data}}</p>\n  <p>Hora: {{link.hora}}</p>\n  <p>País: {{link.pais}}</p>\n  <p>UF: {{link.uf}}</p>\n  <p>Município: {{link.municipio}}</p>\n  <p>Código Postal: {{link.codpostal}}</p>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/home/paulocayres/projetojs/IonicCrud/src/pages/links/links-detalhe/links-detalhe.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -55969,6 +55969,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+//import { NgClass } from '@angular/common';
 
 
 
@@ -55988,19 +55989,23 @@ var LinksPage = (function () {
         this.actionSheet = actionSheet;
         this.alertCtrl = alertCtrl;
         this.select = false;
+        this.currentSelected = null;
         this.links = linksService.getLinks();
         //this.exclui = false;
     }
     LinksPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad Links');
     };
-    LinksPage.prototype.goPage = function (link) {
+    LinksPage.prototype.goPage = function (link, idx) {
         console.log("entrou no gopage");
-        if (this.select == true) {
+        if (this.select == true && idx == this.currentSelected) {
             this.select = false;
+            this.currentSelected = null;
         }
         else {
             this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__links_detalhe_links_detalhe__["a" /* LinksDetalhe */], { index: this.links.indexOf(link), nome: link.nome, data: link.data, hora: link.hora, pais: link.pais, uf: link.uf, municipio: link.municipio, codpostal: link.codpostal });
+            this.select = false;
+            this.currentSelected = null;
         }
     };
     LinksPage.prototype.insert = function () {
@@ -56016,6 +56021,7 @@ var LinksPage = (function () {
         var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__links_modal_links_modal__["a" /* LinksModal */], { parametro: link, index: this.links.indexOf(link) });
         modal.onDidDismiss(function (link) {
             _this.select = false;
+            _this.currentSelected = null;
             _this.linksService.update(link, _this.index);
         });
         modal.present();
@@ -56033,12 +56039,14 @@ var LinksPage = (function () {
         this.linksService.excluir(this.links.indexOf(link));
         //this.exclui = false;
         this.select = false;
+        this.currentSelected = null;
     };
-    LinksPage.prototype.botoes = function (link) {
+    LinksPage.prototype.botoes = function (link, idx) {
         //this.exclui = true;
         this.link = link;
         //this.showConfirm();
         this.select = true;
+        this.currentSelected = idx;
     };
     LinksPage.prototype.showConfirm = function () {
         var _this = this;
@@ -56068,16 +56076,13 @@ var LinksPage = (function () {
 LinksPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-links',template:/*ion-inline-start:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\pages\links\links.html"*/'<!--\n\n  Generated template for the Links page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-buttons *ngIf="select" end>\n\n      <button ion-button icon-only (tap)="update(link)">\n\n        <ion-icon name="create"></ion-icon>\n\n      </button>\n\n      <button ion-button icon-only (tap)="exclui(link)">\n\n        <ion-icon name="trash"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-title>Mapas</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <!--ion-fab  *ngIf=\'exclui\' left top edge>\n\n    <button ion-fab mini color="danger" (click)="excluir(link)"><ion-icon name="close"></ion-icon></button>\n\n  </ion-fab-->\n\n  <ion-list>\n\n\n\n   <button ion-item  *ngFor="let link of links" (press)="botoes(link)" (tap)="goPage(link)" >\n\n     {{link.nome}}\n\n   </button>\n\n\n\n\n\n  </ion-list>\n\n\n\n  <ion-fab top edge right>\n\n    <button ion-fab *ngIf="!select" (click)="insert()"><ion-icon name="add"></ion-icon></button>\n\n  </ion-fab>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\pages\links\links.html"*/,
+        selector: 'page-links',template:/*ion-inline-start:"/home/paulocayres/projetojs/IonicCrud/src/pages/links/links.html"*/'<!--\n  Generated template for the Links page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-buttons *ngIf="select" end>\n      <button ion-button danger icon-only (tap)="update(link)">\n        <ion-icon name="create"></ion-icon>\n      </button>\n      <button ion-button icon-only (tap)="exclui(link)">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>Mapas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!--ion-fab  *ngIf=\'exclui\' left top edge>\n    <button ion-fab mini color="danger" (click)="excluir(link)"><ion-icon name="close"></ion-icon></button>\n  </ion-fab-->\n  <ion-list>\n   <button ion-item [ngClass]="{\'selected\': idx===currentSelected}" *ngFor="let link of links; let idx = index" (press)="botoes(link,idx)" (tap)="goPage(link,idx)" >\n     {{link.nome}}\n   </button>\n  </ion-list>\n\n\n\n\n  <ion-fab top edge right *ngIf="!select">\n    <button ion-fab (click)="insert()"><ion-icon name="add"></ion-icon></button>\n  </ion-fab>\n\n</ion-content>\n'/*ion-inline-end:"/home/paulocayres/projetojs/IonicCrud/src/pages/links/links.html"*/
+        //styleUrls: ['links.scss']
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_links__["a" /* LinksService */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ActionSheetController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* AlertController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_links__["a" /* LinksService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_links__["a" /* LinksService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ActionSheetController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* AlertController */]) === "function" && _f || Object])
 ], LinksPage);
 
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=links.js.map
 
 /***/ }),
@@ -77139,7 +77144,7 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */])
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\app\app.html"*/'<ion-menu [content]="content" persistent>\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\c078270\Desktop\JSProj\IonicCrud\src\app\app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/paulocayres/projetojs/IonicCrud/src/app/app.html"*/'<ion-menu [content]="content" persistent>\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/home/paulocayres/projetojs/IonicCrud/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);

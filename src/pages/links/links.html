@@ -10,7 +10,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-buttons *ngIf="select" end>
-      <button ion-button icon-only (tap)="update(link)">
+      <button ion-button danger icon-only (tap)="update(link)">
         <ion-icon name="create"></ion-icon>
       </button>
       <button ion-button icon-only (tap)="exclui(link)">
@@ -27,16 +27,16 @@
     <button ion-fab mini color="danger" (click)="excluir(link)"><ion-icon name="close"></ion-icon></button>
   </ion-fab-->
   <ion-list>
-
-   <button ion-item  *ngFor="let link of links" (press)="botoes(link)" (tap)="goPage(link)" >
+   <button ion-item [ngClass]="{'selected': idx===currentSelected}" *ngFor="let link of links; let idx = index" (press)="botoes(link,idx)" (tap)="goPage(link,idx)" >
      {{link.nome}}
    </button>
-
-
   </ion-list>
 
-  <ion-fab top edge right>
-    <button ion-fab *ngIf="!select" (click)="insert()"><ion-icon name="add"></ion-icon></button>
+
+
+
+  <ion-fab top edge right *ngIf="!select">
+    <button ion-fab (click)="insert()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
 </ion-content>

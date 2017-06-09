@@ -24665,3 +24665,7 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+page-links button.selected {
+  background-color: lightgray;
+}

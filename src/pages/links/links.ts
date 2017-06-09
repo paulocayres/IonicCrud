@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//import { NgClass } from '@angular/common';
 import { IonicPage, NavController, NavParams, ModalController, ActionSheetController, AlertController } from 'ionic-angular';
 import { LinksService } from "../../providers/links";
 import { LinksDetalhe } from "./links-detalhe/links-detalhe";
@@ -17,7 +18,9 @@ import { LinksModal } from "./links-modal/links-modal";
 @IonicPage()
 @Component({
   selector: 'page-links',
-  templateUrl: 'links.html',
+  templateUrl: 'links.html'
+  //styleUrls: ['links.scss']
+
 })
 export class LinksPage {
 
@@ -26,6 +29,7 @@ export class LinksPage {
   link:any;
   select: boolean = false;
   index: any;
+  currentSelected: number = null;
 
 
   constructor(
@@ -45,16 +49,20 @@ export class LinksPage {
     console.log('ionViewDidLoad Links');
   }
 
-  goPage(link) {
+  goPage(link, idx) {
     console.log("entrou no gopage")
     
-    if (this.select==true){
+    if (this.select==true && idx == this.currentSelected){
       this.select = false;
+      this.currentSelected=null;
+
     } else{
     this.navCtrl.push(LinksDetalhe,
       { index: this.links.indexOf(link), nome: link.nome, data: link.data, hora: link.hora, pais: link.pais, uf: link.uf, municipio: link.municipio, codpostal: link.codpostal }
 
     );
+          this.select = false;
+        this.currentSelected=null;
     }
 
 
@@ -83,6 +91,7 @@ export class LinksPage {
     modal.onDidDismiss(
         (link) => {
         this.select = false;
+        this.currentSelected=null;
         this.linksService.update(link,this.index);
         
     });
@@ -110,18 +119,17 @@ export class LinksPage {
     this.linksService.excluir(this.links.indexOf(link));
     //this.exclui = false;
     this.select = false;
-    
+    this.currentSelected=null;    
   }
 
-  botoes(link: any){
+  botoes(link: any,idx: number){
     //this.exclui = true;
     this.link=link;
     //this.showConfirm();
     this.select = true;
+    this.currentSelected=idx;
   
   }
-
-
 
   showConfirm() {
     let confirm = this.alertCtrl.create({
