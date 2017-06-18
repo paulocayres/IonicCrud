@@ -27,7 +27,8 @@
     <button ion-fab mini color="danger" (click)="excluir(link)"><ion-icon name="close"></ion-icon></button>
   </ion-fab-->
   <ion-list>
-   <button ion-item [ngClass]="{'selected': idx===currentSelected}" *ngFor="let link of links; let idx = index" (press)="botoes(link,idx)" (tap)="goPage(link,idx)" >
+    <button ion-item [ngClass]="{'selected': idx===currentSelected}" *ngFor="let link of links; let idx = index" (press)="botoes(link,idx)"
+      (tap)="goPage(link,idx)">
      {{link.nome}}
    </button>
   </ion-list>

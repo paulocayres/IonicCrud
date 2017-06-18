@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { LinksDetalhe } from './links-detalhe';
+import {NgModule} from '@angular/core';
+import {IonicPageModule} from 'ionic-angular';
+import {LinksDetalhe} from './links-detalhe';
 
 @NgModule({
   declarations: [
@@ -9,8 +9,7 @@ import { LinksDetalhe } from './links-detalhe';
   imports: [
     IonicPageModule.forChild(LinksDetalhe),
   ],
-  exports: [
-    LinksDetalhe
-  ]
+  exports: [LinksDetalhe]
 })
-export class LinksDetalheModule {}
+export class LinksDetalheModule {
+}

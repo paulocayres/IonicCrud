@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-//import { NgClass } from '@angular/common';
-import { IonicPage, NavController, NavParams, ModalController, ActionSheetController, AlertController } from 'ionic-angular';
-import { LinksService } from "../../providers/links";
-import { LinksDetalhe } from "./links-detalhe/links-detalhe";
-import { LinksModal } from "./links-modal/links-modal";
+import {Component} from '@angular/core';
+// import { NgClass } from '@angular/common';
+import {ActionSheetController, AlertController, IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
 
+import {LinksService} from '../../providers/links';
 
+import {LinksDetalhe} from './links-detalhe/links-detalhe';
+import {LinksModal} from './links-modal/links-modal';
 
 
 
@@ -19,30 +19,25 @@ import { LinksModal } from "./links-modal/links-modal";
 @Component({
   selector: 'page-links',
   templateUrl: 'links.html'
-  //styleUrls: ['links.scss']
+  // styleUrls: ['links.scss']
 
 })
 export class LinksPage {
-
   links: any;
-  //exclui: boolean;
-  link:any;
+  // exclui: boolean;
+  link: any;
   select: boolean = false;
   index: any;
   currentSelected: number = null;
 
 
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public linksService: LinksService,
-    public modalCtrl: ModalController,
-    public actionSheet: ActionSheetController,
-    public alertCtrl: AlertController
-  ) {
+      public navCtrl: NavController, public navParams: NavParams,
+      public linksService: LinksService, public modalCtrl: ModalController,
+      public actionSheet: ActionSheetController,
+      public alertCtrl: AlertController) {
     this.links = linksService.getLinks();
-    //this.exclui = false;
-
+    // this.exclui = false;
   }
 
   ionViewDidLoad() {
@@ -50,50 +45,51 @@ export class LinksPage {
   }
 
   goPage(link, idx) {
-    console.log("entrou no gopage")
-    
-    if (this.select==true && idx == this.currentSelected){
+    console.log('entrou no gopage')
+
+        if (this.select == true && idx == this.currentSelected) {
       this.select = false;
-      this.currentSelected=null;
-
-    } else{
-    this.navCtrl.push(LinksDetalhe,
-      { index: this.links.indexOf(link), nome: link.nome, data: link.data, hora: link.hora, pais: link.pais, uf: link.uf, municipio: link.municipio, codpostal: link.codpostal }
-
-    );
-          this.select = false;
-        this.currentSelected=null;
+      this.currentSelected = null;
     }
+    else {
+      this.navCtrl.push(
+          LinksDetalhe, {
+            index: this.links.indexOf(link),
+            nome: link.nome,
+            data: link.data,
+            hora: link.hora,
+            pais: link.pais,
+            uf: link.uf,
+            municipio: link.municipio,
+            codpostal: link.codpostal
+          }
 
-
-
-
-
-
-
+      );
+      this.select = false;
+      this.currentSelected = null;
+    }
   }
   insert() {
     let modal = this.modalCtrl.create(LinksModal);
 
 
     modal.onDidDismiss(
-      (link) => {
-        this.linksService.insert(link)
+        (link) => {this.linksService.insert(link)
 
-      });
+        });
 
     modal.present();
   }
 
-    update(link){
-    let modal = this.modalCtrl.create(LinksModal, {parametro: link, index: this.links.indexOf(link)});
+  update(link) {
+    let modal = this.modalCtrl.create(
+        LinksModal, {parametro: link, index: this.links.indexOf(link)});
 
-    modal.onDidDismiss(
-        (link) => {
-        this.select = false;
-        this.currentSelected=null;
-        this.linksService.update(link,this.index);
-        
+    modal.onDidDismiss((link) => {
+      this.select = false;
+      this.currentSelected = null;
+      this.linksService.update(link, this.index);
+
     });
 
     modal.present();
@@ -101,34 +97,28 @@ export class LinksPage {
 
 
   exclui(link) {
-
-
-    //console.log(link);
+    // console.log(link);
     this.showConfirm();
-    //this.linksService.excluir(this.links.indexOf(link));
-    //this.exclui = false;
-    //this.select = false;
-    
+    // this.linksService.excluir(this.links.indexOf(link));
+    // this.exclui = false;
+    // this.select = false;
   }
 
-    excluir(link) {
-
-
+  excluir(link) {
     console.log(link);
-    //this.showConfirm();
+    // this.showConfirm();
     this.linksService.excluir(this.links.indexOf(link));
-    //this.exclui = false;
+    // this.exclui = false;
     this.select = false;
-    this.currentSelected=null;    
+    this.currentSelected = null;
   }
 
-  botoes(link: any,idx: number){
-    //this.exclui = true;
-    this.link=link;
-    //this.showConfirm();
+  botoes(link: any, idx: number) {
+    // this.exclui = true;
+    this.link = link;
+    // this.showConfirm();
     this.select = true;
-    this.currentSelected=idx;
-  
+    this.currentSelected = idx;
   }
 
   showConfirm() {
@@ -153,7 +143,4 @@ export class LinksPage {
     });
     confirm.present();
   }
-
-
-
 }

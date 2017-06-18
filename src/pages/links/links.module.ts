@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { LinksPage } from './links';
-import { LinksDetalheModule } from "./links-detalhe/links-detalhe.module";
-import { LinksService } from "../../providers/links";
-import { LinksModalModule } from "./links-modal/links-modal.module";
+import {NgModule} from '@angular/core';
+import {IonicPageModule} from 'ionic-angular';
+
+import {LinksService} from '../../providers/links';
+
+import {LinksPage} from './links';
+import {LinksDetalheModule} from './links-detalhe/links-detalhe.module';
+import {LinksModalModule} from './links-modal/links-modal.module';
 
 
 
@@ -12,15 +14,12 @@ import { LinksModalModule } from "./links-modal/links-modal.module";
     LinksPage,
   ],
   imports: [
-    IonicPageModule.forChild(LinksPage),
-    LinksDetalheModule,
-    LinksModalModule
+    IonicPageModule.forChild(LinksPage), LinksDetalheModule, LinksModalModule
   ],
   exports: [
     LinksPage,
   ],
-  providers: [
-    LinksService
-  ],
+  providers: [LinksService],
 })
-export class LinksModule {}
+export class LinksModule {
+}
