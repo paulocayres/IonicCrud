@@ -148,19 +148,11 @@ export class LinksService {
     ]
   }
 
-  getLinks() {
-    return this.links;
-  }
+  getLinks() { return this.links; }
 
-  insert(link) {
-    this.links.push(link);
-  }
+  insert(link) { this.links.push(link); }
 
-  update(link, index) {
-    this.links[index] = link;
-  }
+  update(link, index) { this.links[index] = link; }
 
-  excluir(index) {
-    this.links.splice(index, 1);
-  }
+  excluir(index) { this.links.splice(index, 1); }
 }

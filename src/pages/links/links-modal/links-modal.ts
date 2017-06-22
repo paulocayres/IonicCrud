@@ -1,5 +1,10 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  ViewController
+} from 'ionic-angular';
 
 /**
  * Generated class for the LinksModal page.
@@ -16,9 +21,8 @@ export class LinksModal {
   link: any;
   index: any;
 
-  constructor(
-      public navCtrl: NavController, public navParams: NavParams,
-      public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public viewCtrl: ViewController) {
     this.link = navParams.get('parametro') || {
       nome: '',
       data: '',
@@ -34,15 +38,9 @@ export class LinksModal {
 
 
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LinksModal');
-  }
+  ionViewDidLoad() { console.log('ionViewDidLoad LinksModal'); }
 
-  cancel() {
-    this.viewCtrl.dismiss(this.link);
-  }
+  cancel() { this.viewCtrl.dismiss(this.link); }
 
-  salvar() {
-    this.viewCtrl.dismiss(this.link);
-  }
+  salvar() { this.viewCtrl.dismiss(this.link); }
 }

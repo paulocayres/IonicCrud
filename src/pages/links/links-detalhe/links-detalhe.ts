@@ -1,5 +1,10 @@
 import {Component} from '@angular/core';
-import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
+import {
+  IonicPage,
+  ModalController,
+  NavController,
+  NavParams
+} from 'ionic-angular';
 
 import {LinksService} from '../../../providers/links';
 import {LinksModal} from '../links-modal/links-modal';
@@ -19,13 +24,13 @@ export class LinksDetalhe {
   link: any;
   index: any;
 
-  constructor(
-      public navCtrl: NavController, public navParams: NavParams,
-      public modalCtrl: ModalController, public linksService: LinksService
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public modalCtrl: ModalController,
+              public linksService: LinksService
 
 
 
-  ) {
+              ) {
     this.link = {
       nome: navParams.get('nome'),
       data: navParams.get('data'),
@@ -41,9 +46,7 @@ export class LinksDetalhe {
     console.log('Construiu');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LinksDetalhe');
-  }
+  ionViewDidLoad() { console.log('ionViewDidLoad LinksDetalhe'); }
 
   update(link) {
     let modal =

@@ -1,6 +1,13 @@
 import {Component} from '@angular/core';
 // import { NgClass } from '@angular/common';
-import {ActionSheetController, AlertController, IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
+import {
+  ActionSheetController,
+  AlertController,
+  IonicPage,
+  ModalController,
+  NavController,
+  NavParams
+} from 'ionic-angular';
 
 import {LinksService} from '../../providers/links';
 
@@ -31,18 +38,16 @@ export class LinksPage {
   currentSelected: number = null;
 
 
-  constructor(
-      public navCtrl: NavController, public navParams: NavParams,
-      public linksService: LinksService, public modalCtrl: ModalController,
-      public actionSheet: ActionSheetController,
-      public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public linksService: LinksService,
+              public modalCtrl: ModalController,
+              public actionSheet: ActionSheetController,
+              public alertCtrl: AlertController) {
     this.links = linksService.getLinks();
     // this.exclui = false;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Links');
-  }
+  ionViewDidLoad() { console.log('ionViewDidLoad Links'); }
 
   goPage(link, idx) {
     console.log('entrou no gopage')
@@ -52,19 +57,19 @@ export class LinksPage {
       this.currentSelected = null;
     }
     else {
-      this.navCtrl.push(
-          LinksDetalhe, {
-            index: this.links.indexOf(link),
-            nome: link.nome,
-            data: link.data,
-            hora: link.hora,
-            pais: link.pais,
-            uf: link.uf,
-            municipio: link.municipio,
-            codpostal: link.codpostal
-          }
+      this.navCtrl.push(LinksDetalhe,
+                        {
+                          index: this.links.indexOf(link),
+                          nome: link.nome,
+                          data: link.data,
+                          hora: link.hora,
+                          pais: link.pais,
+                          uf: link.uf,
+                          municipio: link.municipio,
+                          codpostal: link.codpostal
+                        }
 
-      );
+                        );
       this.select = false;
       this.currentSelected = null;
     }
@@ -73,10 +78,9 @@ export class LinksPage {
     let modal = this.modalCtrl.create(LinksModal);
 
 
-    modal.onDidDismiss(
-        (link) => {this.linksService.insert(link)
+    modal.onDidDismiss((link) => {this.linksService.insert(link)
 
-        });
+                       });
 
     modal.present();
   }
@@ -126,12 +130,7 @@ export class LinksPage {
       title: 'Confirmação',
       message: 'Deseja Excluir?',
       buttons: [
-        {
-          text: 'Não',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
+        {text: 'Não', handler: () => { console.log('Disagree clicked'); }},
         {
           text: 'Sim',
           handler: () => {

@@ -22,7 +22,8 @@ import {MyApp} from './app.component';
     HomePage,
   ],
   providers: [
-    StatusBar, SplashScreen,
+    StatusBar,
+    SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

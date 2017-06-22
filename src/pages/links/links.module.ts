@@ -14,7 +14,9 @@ import {LinksModalModule} from './links-modal/links-modal.module';
     LinksPage,
   ],
   imports: [
-    IonicPageModule.forChild(LinksPage), LinksDetalheModule, LinksModalModule
+    IonicPageModule.forChild(LinksPage),
+    LinksDetalheModule,
+    LinksModalModule
   ],
   exports: [
     LinksPage,
